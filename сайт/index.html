@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<header>
+		<div class="logo" onclick="slowScroll('#top')">
+			<span>Defender</span>
+		</div>
+			
+		<div class="about">
+			<a href="#" onclick="slowScroll('#main')">О нас</a>
+
+			<a href="#" onclick="slowScroll('#news')">Новости</a>
+
+			<a href="#" onclick="slowScroll('#reviews')">Связаться с нами</a>
+		</div>
+	</header>
+
+<div id="top">
+	<h1>Помощь населению</h1>
+	<h3>в трудном положение</h3>
+</div>
+
+<div id="main">
+	<div class="intro">
+		<h2>Мы всегда поможем</h2>
+		<span>в сложных жизненных ситуациях</span>
+	</div>
+	<div class="text">
+		<span>Деятельность всех социальных служб на территории Российской Федерации, которые оказывают социальную поддержку уязвимым слоям населения, оказывают социально-бытовые, медицинские, педагогические и правовые услуги, а также материальную помощь на разных уровнях (пенсии, льготы, стипендии, выплаты) являются элементами социального обслуживания.</span>
+	</div>
+
+
+</div>
+
+	<div class="main__text">
+		<div class="main_header">Наши цели</div>
+
+		<div class="main_content">
+			<p><img src="img/s1200.png" width="20px" height="20px">
+			 Cодействие обеспечению равных возможностей для всех членов об­щества.</p>
+	
+		</div>
+
+		<div class="main_content">
+			<p><img src="img/s1200.png" width="20px" height="20px">
+			Возможность вести достойную, безопасную и творческую жизнь.</p>
+	
+		</div>
+
+		<div class="main_content">
+			<p><img src="img/s1200.png" width="20px" height="20px">
+			Оказание содействия гражданам в преодолении трудных жизненных ситуаций.</p>
+	
+		</div>
+
+		<div class="main_content">
+			<p><img src="img/s1200.png" width="20px" height="20px">
+			Прогнозирование и профилактика возникновения трудных жизнен­ных ситуаций.</p>
+	
+		</div>
+
+
+		<div class="main_content">
+			<p><img src="img/s1200.png" width="20px" height="20px">
+			Поддержка незащищенных слоев населения.</p>
+	
+		</div>
+	
+		</div>
+
+
+
+
+
+		<div class="news" id="news">
+			<div class="mySlides">
+			<div class="mySliders">
+				<div class="numberstext">1/3</div>
+				<img src="img/1.png" style="width: 100%">
+			</div>
+
+			<div class="mySliders">
+				<div class="numberstext">2/3</div>
+				<img src="img/Без-имени-1.png" style="width: 100%">
+			</div>
+
+
+			<div class="mySliders">
+				<div class="numberstext">3/3</div>
+				<img src="img/3.png" style="width: 100%">
+			</div>
+
+			<a class="prev" onclick="plusSliders(-1)">&#10094</a>
+			<a class="next" onclick="plusSliders(1)">&#10095</a>
+	    </div>
+	    <br>
+	</div>
+
+
+
+	<div class="reviews" id="reviews">
+	
+		<form class="form__otz">
+			<div><h2>Связаться с нами просто! заполните поля,и в короткое время наш оператор поможет решить вашу проблему.</h2></div><br>
+			<label for="email">Email:
+			<input type="text" placeholder="Введите email" id="email" data-rule="email">
+			</label><br>
+			<label for="name">Имя:
+			<input type="text" placeholder="Введите ваше имя" id="name" data-rule="name">
+			</label><br>
+			<label for="name">Тема:
+			<input type="text" placeholder="Введите тему сообщения" id="name" data-rule="tema">
+			</label><br>
+			<label for="soob">
+			<textarea placeholder="Введите ваше сообщение..." id="soob" data-rule="text"></textarea>
+			</label><br>
+			<input type="button" value="Отправить" id="button_">	
+		</form>
+	</div>
+
+
+<footer class="footer">
+	<div class="left_content">
+		<img src="img/Coat_of_arms_of_Yaroslavl_Oblast_(only_escutcheon)_01.svg.png" alt="герб Ярославля" width="100px" height="110px">
+		<p>Официальный портал города<br> Ярославля</p>
+	</div>
+
+	<div class="center_content">
+		<p>Официальный портал города Ярославля.
+Информационное наполнение и сопровождение: мэрия города Ярославля и управление информационной политики и социальных коммуникаций мэрии города Ярославля.</p>
+<p>Отдельная благодарность Авдееву Алексею за создание прекрасного сайт</p>
+	</div>
+
+	<div class="right_content">
+
+		<p>Горячая линия:</p>
+		<p>тел. 7 (915) 999-45-65</p>
+		<p>тел. 7 (915) 888-45-65</p>
+		<p>тел. 7 (915) 777-45-65</p>
+	</div>
+</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		function slowScroll(id){
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+
+		$(document).on("scroll", function(){
+			if($(window).scrollTop() === 0)
+				$("header").removeClass("fixed");
+			else
+				$("header").attr("class", "fixed");
+		});
+
+		function slowScroll(id){
+			$('html, body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+
+		$(document).on("scroll", function(){
+			if($(window).scrollTop() === 0)
+				$("header").removeClass("fixed");
+			else
+				$("header").attr("class", "fixed");
+		});
+
+
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSliders(n){
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n){
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+	var i;
+	var slides = document.getElementsByClassName("mySliders");
+	var dots = document.getElementsByClassName("dot");
+
+	if (n > slides.length){
+		slideIndex = 1
+	}
+	if (n < 1){
+		slideIndex=slides.length
+	}
+	for ( i = 0; i < slides.length; i++){
+		slides[i].style.display="none";
+	}
+	slides[slideIndex-1].style.display = "block";
+
+}
+
+
+
+	</script>
+
+</body>
+</html>
